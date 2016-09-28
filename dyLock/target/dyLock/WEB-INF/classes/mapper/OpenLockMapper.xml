@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="net.dy.dao.OpenLockDao" >
+  <resultMap id="BaseResultMap" type="net.dy.domain.OpenLock" >
+    <id column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="VARCHAR" />
+    <result column="MOBILE" property="mobile" jdbcType="VARCHAR" />
+    <result column="COMPANY_ID" property="companyId" jdbcType="VARCHAR" />
+    <result column="PHONE_MODEL" property="phoneModel" jdbcType="VARCHAR" />
+    <result column="SDK_V" property="sdkV" jdbcType="VARCHAR" />
+    <result column="SYSTEM_V" property="systemV" jdbcType="VARCHAR" />
+    <result column="LOCK_MAC" property="lockMac" jdbcType="VARCHAR" />
+    <result column="OPEN_TIME" property="openTime" jdbcType="VARCHAR" />
+    <result column="IP_ADDRESS" property="ipAddress" jdbcType="VARCHAR" />
+    <result column="JUDGE" property="judge" jdbcType="VARCHAR" />
+    <result column="JUDGE_CONTENT" property="judgeContent" jdbcType="VARCHAR" />
+    <result column="ON_OFF" property="onOff" jdbcType="VARCHAR" />
+  </resultMap>
+	<sql id="BaseList" >
+		ID,CREATE_TIME,MOBILE,COMPANY_ID,PHONE_MODEL,SDK_V,SYSTEM_V,LOCK_MAC,OPEN_TIME,IP_ADDRESS,JUDGE,JUDGE_CONTENT,ON_OFF
+	</sql>
+	<insert id="insert" parameterType="net.dy.domain.OpenLock">
+		insert into t_open_lock (ID,CREATE_TIME,MOBILE,COMPANY_ID,PHONE_MODEL,SDK_V,SYSTEM_V,LOCK_MAC,OPEN_TIME,IP_ADDRESS,JUDGE,JUDGE_CONTENT,ON_OFF) 
+		values ( #{id},#{createTime},#{mobile},#{companyId},#{phoneModel},#{sdkV},#{systemV},#{lockMac},#{openTime},#{ipAddress},#{judge},#{judgeContent},#{onOff} )
+	</insert>
+</mapper>

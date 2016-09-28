@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="net.dy.dao.UserDao" >
+  <resultMap id="BaseResultMap" type="net.dy.domain.User" >
+    <id column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="VARCHAR" />
+     <result column="UPDATE_TIME" property="updateTime" jdbcType="VARCHAR" />
+    <result column="MOBILE" property="mobile" jdbcType="VARCHAR" />
+    <result column="COMPANY_ID" property="companyId" jdbcType="VARCHAR" />
+    <result column="PHONE_MODEL" property="phoneModel" jdbcType="VARCHAR" />
+    <result column="SDK_V" property="sdkV" jdbcType="VARCHAR" />
+    <result column="SYSTEM_V" property="systemV" jdbcType="VARCHAR" />
+    <result column="Type" property="type" jdbcType="VARCHAR" />
+  </resultMap>
+	<sql id="BaseList" >
+		ID,CREATE_TIME,MOBILE,COMPANY_ID,PHONE_MODEL,SDK_V,SYSTEM_V
+	</sql>
+	<insert id="insert" parameterType="net.dy.domain.User">
+		 insert into t_user (ID,CREATE_TIME,MOBILE,COMPANY_ID,PHONE_MODEL,SDK_V,SYSTEM_V
+		 ) values ( #{id},#{createTime},#{mobile},#{companyId},#{phoneModel},#{sdkV},#{systemV}
+		 )
+	</insert>
+	<select id="selectMobile" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select 
+			<include refid="BaseList" />
+			from t_user where mobile = #{mobile}
+	</select>
+	<update id="updateMobile" parameterType="net.dy.domain.User" >
+		update t_user 
+		<set>
+			<if test="phoneModel != null and phoneModel != ''">
+				PHONE_MODEL = #{phoneModel},
+			</if>
+			<if test="sdkV != null and sdkV != ''">
+				SDK_V = #{sdkV},
+			</if>	
+			<if test="systemV != null and systemV != ''">
+				SYSTEM_V = #{systemV},
+			</if>
+			<if test="updateTime != null and updateTime != ''">
+				UPDATE_TIME = #{updateTime}
+			</if>			
+		</set>
+		where MOBILE = #{mobile}
+	</update>
+</mapper>

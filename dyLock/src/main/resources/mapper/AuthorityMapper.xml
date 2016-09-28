@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="net.dy.dao.AuthorityDao" >
+  <resultMap id="BaseResultMap" type="net.dy.domain.Authority" >
+    <id column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="AUTHORITY_NAME" property="authorityName" jdbcType="VARCHAR" />
+    <result column="AUTHORITY_URL" property="authorityUrl" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="BaseList" >
+    ID, AUTHORITY_NAME, AUTHORITY_URL ,TYPE, CREATE_TIME
+  </sql>
+	<insert id="insert" parameterType="net.dy.domain.Authority">
+	 insert into t_authority (ID, AUTHORITY_NAME, AUTHORITY_URL ,TYPE, CREATE_TIME)
+		 values (#{id},#{authorityName},#{authorityUrl},#{type},#{createTime})
+	</insert>
+<!-- 	<select id="selectList"  resultMap="BaseResultMap"> -->
+<!-- 		select  -->
+<!-- 		<include refid="BaseList" /> -->
+<!-- 		from t_authority order by id -->
+<!-- 	</select> -->
+<!-- 	<select id="selectId"  resultMap="BaseResultMap" parameterType="java.lang.String"> -->
+<!-- 		select  -->
+<!-- 		<include refid="BaseList" /> -->
+<!-- 		from t_authority where id = #{id} -->
+<!-- 	</select> -->
+<!-- 	<delete id="deleteId" parameterType="java.lang.String"> -->
+<!-- 		delete from t_authority where id=#{id} -->
+<!-- 	</delete> -->
+<!-- 	<update id="updateId" parameterType="net.dy.domain.Authority " > -->
+<!-- 		update t_authority  -->
+<!-- 		<set> -->
+<!-- 			<if test="authorityName != null"> -->
+<!-- 				AUTHORITY_NAME = #{authorityName}, -->
+<!-- 			</if> -->
+<!-- 			<if test="authorityUrl != null"> -->
+<!-- 				AUTHORITY_URL = #{authorityUrl}, -->
+<!-- 			</if> -->
+<!-- 			<if test="type != null"> -->
+<!-- 				TYPE = #{type}, -->
+<!-- 			</if> -->
+<!-- 			<if test="createTime != null"> -->
+<!-- 				CREATE_TIME = #{createTime} -->
+<!-- 			</if> -->
+<!-- 			where id =#{id} -->
+<!-- 		</set> -->
+<!-- 	</update> -->
+</mapper>

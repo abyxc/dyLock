@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="net.dy.dao.LogDao" >
+  <resultMap id="BaseResultMap" type="net.dy.domain.Log" >
+    <id column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="CREARE_TIME" property="creareTime" jdbcType="VARCHAR" />
+    <result column="LOG_TXT" property="logTxt" jdbcType="VARCHAR" />
+    <result column="IP" property="ip" jdbcType="VARCHAR" />
+    <result column="TIME" property="time" jdbcType="VARCHAR" />
+    <result column="COOKIES" property="cookies" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, CREARE_TIME, LOG_TXT, IP ,TIME, COOKIES
+  </sql>
+  <insert id="insert" parameterType="net.dy.domain.Log" >
+    insert into t_log (ID, CREARE_TIME, LOG_TXT, 
+      IP, TIME, COOKIES)
+    values (#{id,jdbcType=VARCHAR}, #{creareTime,jdbcType=VARCHAR}, #{logTxt,jdbcType=VARCHAR}, 
+      #{ip,jdbcType=VARCHAR}, #{time,jdbcType=VARCHAR}, #{cookies,jdbcType=VARCHAR})
+  </insert>
+	
+	
+	
+	<select id="selectId" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select 
+    		<include refid="Base_Column_List" />
+    	from t_log where ID = #{id,jdbcType=VARCHAR}
+	</select>
+	<select id="select" resultMap="BaseResultMap">
+		select 
+    		<include refid="Base_Column_List" />
+    	from t_log where 1=1 ORDER BY CREARE_TIME
+	</select>
+	<select id="selectList"  parameterType="net.dy.domain.Log" resultMap="BaseResultMap">
+		 select 
+    		<include refid="Base_Column_List" />
+    	from t_log 
+    	<where>
+    		<if test="creareTime != null and creareTime != '' ">
+    			AND CREARE_TIME LIKE  "%${creareTime}%"
+    		</if>
+    		<if test="id != null and id != '' ">
+<!--     			AND ID LIKE  CONCAT('%','${id}','%' )  -->
+    			AND ID LIKE  "%${id}%"
+    		</if>
+    	</where>
+    	ORDER BY CREARE_TIME
+	</select>
+	<update id="updateId"  parameterType="net.dy.domain.Log" >
+		update t_log 
+		<set>
+			<if test="creareTime!= null ">
+				 CREARE_TIME = #{creareTime} ,
+			</if>
+			<if test="ip != null ">
+				IP = #{ip},
+			</if>
+			<if test="cookies != null">
+				 COOKIES = #{cookies}, 
+			</if>
+			<if test="time != null">
+				 TIME = #{time}
+			</if>
+		</set>
+		WHERE ID = #{id}
+	</update>
+	<delete id="deleteId" parameterType="java.lang.String">
+		delete from t_log where id = #{id}
+	</delete>
+	
+</mapper>

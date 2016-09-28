@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="net.dy.dao.RefreshDao" >
+  <resultMap id="BaseResultMap" type="net.dy.domain.Refresh" >
+    <id column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="VARCHAR" />
+    <result column="MOBILE" property="mobile" jdbcType="VARCHAR" />
+    <result column="PHONE_MODEL" property="phoneModel" jdbcType="VARCHAR" />
+    <result column="SDK_V" property="sdkV" jdbcType="VARCHAR" />
+    <result column="SYSTEM_V" property="systemV" jdbcType="VARCHAR" />
+    <result column="LOCK_MAC" property="lockMac" jdbcType="VARCHAR" />
+    <result column="FIRMWARE_NEW" property="firmwareNew" jdbcType="VARCHAR" />
+    <result column="FIRMWARE_OLD" property="firmwareOld" jdbcType="VARCHAR" />
+    <result column="SOFTWARE_V" property="softwareV" jdbcType="VARCHAR" />
+    <result column="COMPANY_ID" property="companyId" jdbcType="VARCHAR" />
+  </resultMap>
+	<sql id="BaseList" >
+		ID,CREATE_TIME,MOBILE,PHONE_MODEL,SDK_V,SYSTEM_V,LOCK_MAC,FIRMWARE_NEW,FIRMWARE_OLD,SOFTWARE_V,COMPANY_ID
+	</sql>
+	<insert id="insert" parameterType="net.dy.domain.Refresh">
+		insert into t_refresh (ID,CREATE_TIME,MOBILE,PHONE_MODEL,SDK_V,SYSTEM_V,LOCK_MAC,FIRMWARE_NEW,FIRMWARE_OLD,SOFTWARE_V,COMPANY_ID)
+		values ( #{id},#{createTime},#{mobile},#{phoneModel},#{sdkV},#{systemV},#{lockMac},#{firmwareNew},#{firmwareOld},#{softwareV},#{companyId} )
+	</insert>
+</mapper>
