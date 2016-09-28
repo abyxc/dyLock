@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="messagesAction" namespace="/manage/messages" extends="global">
+		<action name="*" class="messagesAction" method="{1}">
+			<result name="list">list.jsp</result>
+			<result name="detailmsg">detailmsg.jsp</result>
+			<result name="toDetails">details.jsp</result>
+			<result name="tolist" type="redirect">list.action?ids=2&amp;searchTearm1=${searchTearm1}&amp;pageBean.currentPage=${pageBean.currentPage}</result>
+			<result name="toupdate">releasemsg.jsp</result>
+		</action>
+	</package>
+</struts>

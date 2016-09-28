@@ -1,0 +1,70 @@
+<div class="nav-header">
+    <p class="new-add">证件类型管理</p>
+</div>
+<div>
+    <form action="">
+        <input type="button" class="zhenjian-add" value="增加"/>
+    </form>
+</div>
+<div class="zjtype">
+    <table class="zjtype-table" cellspacing="0" cellpadding="0">
+        <tr class="table-th">
+            <td>证件类型列表</td>
+            <td>操作</td>
+        </tr>
+        <tr>
+            <td>身份证</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-edit">编辑</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>户口簿</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-edit">编辑</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>财产权属凭证</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-edit">编辑</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>资助出国留学协议</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-edit">编辑</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>夫妻拆产约定协议的文本样稿</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-edit">编辑</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="page-number">
+    <span style="color:#e9110b;">1</span> 2 3....... 12 页
+</div>
+
+<script>
+    $(function(){
+        $(".role-look").click(function(){
+            $(".content-right").load("tpl/gongzheng-peizhi/papers-type-look.html")
+        })
+        $(".role-edit").click(function(){
+            $(".content-right").load("tpl/gongzheng-peizhi/papers-type-edit.html")
+        })
+    })
+</script>

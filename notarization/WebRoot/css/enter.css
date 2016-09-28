@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei";
+}
+a {
+    text-decoration: none;
+}
+body,html{
+    width:100%;
+    height:100%;
+}
+
+img {
+    vertical-align: middle;
+}
+
+li {
+    list-style: none;
+}
+input {
+    outline: none;
+
+}
+.enter-con{
+    width:100%;
+    height:100%;
+    position:absolute;
+    background:url('../images/background.png') no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+.enter-table{
+    position:absolute;
+    top:52%;
+    left: 50%;
+    margin-left: -170px;
+    font-size: 18px;
+    color:#515151;
+}
+.enter-table input{
+    width:260px;
+    height:30px;
+    line-height: 30px;
+}
+.enter-password{
+    letter-spacing: 0.4px;
+}
+.enter-submit{
+    margin-left:72px;
+    margin-top: 24px;
+}
+.enter-table input{
+    border:1px solid #ccc;
+    padding-left: 4px;
+}
+.enter-submit input{
+    background-color: #1c67a1;
+    color:#c2def3;
+    border: none;
+    padding-left:0;
+    border-radius: 4px;
+    font-size: 17px;
+    letter-spacing: 2px;
+}

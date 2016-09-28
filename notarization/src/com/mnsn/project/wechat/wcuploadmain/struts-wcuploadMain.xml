@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="wcUploadMainAction" namespace="/manage/wechat/wcuploadMain" extends="global">
+		<action name="*" class="wcUploadMainAction" method="{1}">
+			<result name="check">check.jsp</result>
+			<result name="checkType">checkType.jsp</result>
+			<result name="toDetail">upload-pic.jsp</result>
+			<result name="fillRecord">${basePath}/manage/wechat/wcuploadMain/fillRecord.jsp</result>
+			<result name="fillRecord2">${basePath}/manage/wechat/wcuploadMain/fillRecord2.jsp</result>
+			<result name="register">${basePath}/manage/wechat/wcuser/register.jsp</result>
+		</action>
+	</package>
+</struts>

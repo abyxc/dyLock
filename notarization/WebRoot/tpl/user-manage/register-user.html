@@ -1,0 +1,92 @@
+<div class="nav-header">
+    <p class="new-add">注册用户</p>
+</div>
+<div class="search-container">
+    <form action="">
+        <span class="role-name">
+            用户姓名：<input type="text"/>
+        </span>
+        <span class="role-state">
+            手机号：<input type="number"/>
+        </span>
+        <input type="button" value="查询" class="search"/>
+    </form>
+</div>
+<div class="role-table">
+    <table cellspacing="0" cellpadding="0">
+        <tr class="table-th">
+            <td>用户姓名</td>
+            <td>手机号</td>
+            <td>证件号码</td>
+            <td>证件类型</td>
+            <td>操作</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>18812348765</td>
+            <td>18812348765</td>
+            <td>身份证</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-edit">编辑</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>18812348765</td>
+            <td>18812348765</td>
+            <td>身份证</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-edit">编辑</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>18812348765</td>
+            <td>18812348765</td>
+            <td>身份证</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-edit">编辑</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>18812348765</td>
+            <td>18812348765</td>
+            <td>身份证</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-edit">编辑</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>18812348765</td>
+            <td>18812348765</td>
+            <td>身份证</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-edit">编辑</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    $(function(){
+        $(".role-look").click(function(){
+            $(".content-right").load("tpl/user-manage/register-user-look.html")
+        })
+
+        $(".role-edit").click(function(){
+            $(".content-right").load("tpl/user-manage/register-user-edit.html")
+        })
+    })
+</script>

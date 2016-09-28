@@ -1,0 +1,123 @@
+<div class="nav-header">
+    <p class="new-add">统计清单</p>
+</div>
+<div class="info-nav">
+    <span>公证类型：
+        <select name="" >
+            <option value="">1</option>
+            <option value="">2</option>
+        </select>
+    </span>
+    <span>办理状态：
+        <select name="" >
+            <option value="">已完结</option>
+            <option value="">2</option>
+        </select>
+    </span>
+    <span>公证类型：
+        <select name="" >
+            <option value="">1</option>
+            <option value="">2</option>
+        </select>
+    </span>
+    <span>
+        时间：<select name="">
+        <option value="">2015-1-1</option>
+        <option value="">2015-1-2</option>
+    </select>
+        至 <select name="">
+        <option value="">2015-1-1</option>
+        <option value="">2015-1-2</option>
+    </select>
+    </span>
+    <span>
+        <input type="button" value="搜索" class="search"/>
+    </span>
+</div>
+<div class="info-table">
+    <table cellspacing="0" cellpadding="0">
+        <tr class="table-th">
+            <td>用户姓名</td>
+            <td>证件类型</td>
+            <td>证件号码</td>
+            <td>角色状态</td>
+            <td>公证状态</td>
+            <td>操作</td>
+        </tr>
+        <tr>
+            <td>011</td>
+            <td>身份证</td>
+            <td>身份证</td>
+            <td>超级管理员</td>
+            <td>已完结</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>011</td>
+            <td>身份证</td>
+            <td>身份证</td>
+            <td>超级管理员</td>
+            <td>已完结</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>011</td>
+            <td>身份证</td>
+            <td>身份证</td>
+            <td>超级管理员</td>
+            <td>已完结</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>011</td>
+            <td>身份证</td>
+            <td>身份证</td>
+            <td>超级管理员</td>
+            <td>已完结</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>011</td>
+            <td>身份证</td>
+            <td>身份证</td>
+            <td>超级管理员</td>
+            <td>已完结</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>011</td>
+            <td>身份证</td>
+            <td>身份证</td>
+            <td>超级管理员</td>
+            <td>已完结</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+
+    </table>
+</div>
+
+<script>
+    $(function(){
+        $(".role-look").click(function(){
+            $(".content-right").load("tpl/tongji/tongji-look.html")
+        })
+    })
+</script>

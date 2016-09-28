@@ -1,0 +1,1004 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: "Microsoft YaHei";
+    width: 100%;
+    /*min-width: 1422px;*/
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+ul li {
+    list-style: none;
+}
+
+.header {
+    background: #124369;
+    height: 60px;
+}
+
+.header-left, .header-right, .link-container, .welcome, .list-first {
+    display: inline-block;
+}
+
+.header-left {
+    height: 100%;
+}
+/******************************/
+input[type="text"]
+{
+  	width: 140px;
+    border: 1px solid #ccc;
+    outline: none;
+    height: 25px;
+    padding: 2px;
+}
+span.logo {
+	height:60px;
+	width:260px;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    margin-left: 5px;
+    line-height: 60px;
+    background: no-repeat left center;
+    background-image:url('../images/main/logo.png');
+    padding-left: 55px;
+}
+
+.header-right {
+    float: right;
+    height: 100%;
+}
+
+.link-container {
+    margin: 0 25px;
+    height: 100%;
+    width: 60px;
+    text-align: center;
+}
+
+.link-container a {
+    color: #fff;
+    font-size: 12px;
+    display: block;
+    padding-top: 20px;
+    margin-top: 15px;
+}
+
+
+a.home {
+    background:url('../images/main/home-icon2.png') no-repeat center top;
+    color: #a7dffa;
+}
+
+a.personal-data {
+    background: url('../images/main/per-info-icon.png') no-repeat center top;
+}
+
+a.exit {
+    background: url('../images/main/quit-icon.png') no-repeat center top;
+}
+
+.nav {
+    width: 100%;
+    height: 40px;
+    background: #124369;
+}
+
+.welcome {
+    width: 15%;
+    /*min-width: 180px;*/
+    height: 40px;
+    float: left;
+    background-color: #185c90;
+    text-align: center;
+    /*border-right: 2px solid #124369;*/
+}
+
+.welcome img {
+    vertical-align: bottom;
+    margin-top: 3px;
+}
+
+.welcome a {
+    font-size: 14px;
+    color: #ffffff;
+    margin-left: 5px;
+}
+
+ul.list-first {
+    width: 84%;
+    /*min-width: 1200px;*/
+    float: right;
+    cursor: pointer;
+}
+
+.first {
+    width: 12.5%;
+    /*min-width: 150px;*/
+    height: 40px;
+    float: left;
+    list-style: none;
+    text-align: center;
+    background-color: #185c90;
+    border-right: 1px solid #3793da;
+    border-left: 1px solid #1c5078;
+}
+
+
+
+.first span {
+    line-height: 40px;
+    color: #fff;
+    width: 100%;
+    display: block;
+    height: 100%;
+    font-size: 18px;
+}
+
+ul.list-second {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 110px;
+    /*min-width: 180px;*/
+    width: 15%;
+    z-index: 3;
+    background: #124369;
+}
+
+.second {
+    list-style: none;
+    width: 100%;
+    height: 42px;
+    margin: 0 auto;
+}
+
+.second a, .second span {
+    line-height: 40px;
+    color: #fff;
+    width: 100%;
+    display: block;
+    height: 100%;
+    font-size: 16px;
+}
+/*
+ul.list-third {
+    display: none;
+    margin-top: 3px;
+    width: 100%;
+}
+
+li.third {
+    min-width: 106px;
+    width: 49%;
+    height: 36px;
+    float: left;
+    list-style: none;
+    background: #63839c;
+}
+
+li.active-third {
+    background: #217abf;
+}
+
+.third a {
+    line-height: 36px;
+}
+
+.third-first {
+    margin-right: 1%;
+}
+*/
+
+.content-left {
+    /*min-width: 180px;*/
+    width: 15%;
+    min-height: 600px;
+    background: #124369;
+    display: inline-block;
+    position: absolute;
+    top: 105px;
+    left: 0;
+    bottom: 0;
+}
+
+.content-right {
+    width: 84%;
+    display: inline-block;
+    padding: 5px 5px 0 0;
+    float: right;
+    position: absolute;
+    top: 105px;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+}
+
+
+.nav-header {
+    width: 100%;
+    background-color: #217abf;
+    height: 40px;
+}
+.nav-headerImg {
+    width: 100%;
+    background-color: #ffe0d0;
+    height: 40px;
+}
+.new-add {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding-left: 20px;
+}
+.new-addImg {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color:  #4d4d4d;
+    padding-left: 20px;
+}
+/***********鏂板鐢ㄦ埛**************/
+.add-content {
+    width: 100%;
+    border: 1px solid #ccc;
+
+}
+
+.add-con {
+    width: 362px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.add-name, .add-password {
+    font-size: 18px;
+    color: #4c4c4c;
+    margin-bottom: 16px;
+
+}
+
+.add-name input, .add-password input {
+    width: 210px;
+    height: 30px;
+    border: 1px solid #ccc;
+    padding-left: 2px;
+    outline: none;
+}
+
+.add-password {
+    letter-spacing: 1.5px;
+}
+
+.add-btn input, input.back {
+    width: 88px;
+    height: 32px;
+    background-color: #ff7d3d;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    margin: 60px 100px 40px 20px;
+    border-radius: 2px;
+}
+
+.add-btn .fanhui {
+    margin-right: 0;
+}
+
+/************鏌ョ湅琛ㄥ崟鏍峰紡********************/
+
+.look-table-container, .edit-table-container {
+    border: 1px solid #ccc;
+}
+
+.look-table-container{
+	background-color: white;
+}
+
+table.look-table, table.edit-table {
+    width: 80%;
+    margin: 20px auto;
+}
+table.look-templet{
+    width: 80%;
+    margin: 20px auto;
+}
+
+.look-templet td{
+    height: 10px;
+    font-size: 18px;
+}
+.look-table td, .edit-table td {
+    height: 35px;
+    font-size: 18px;
+}
+
+span.name-title {
+    display: inline-block;
+    width: 130px;
+    text-align: right;
+    font-size: 18px;
+}
+
+.edit-table input {
+    border: 1px solid #aaa;
+    outline: none;
+    font-size: 16px;
+    line-height: 20px;
+    height: 25px;
+    width: 200px;
+    text-indent: 8px;
+}
+
+.button-container {
+    text-align: center;
+}
+
+button.return, button.submit {
+    width: 88px;
+    height: 32px;
+    background-color: #ff7d3d;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    margin: 60px 100px 40px 20px;
+    border-radius: 2px;
+}
+
+/***************缁熻娓呭崟鏍峰紡***************/
+.info-nav {
+    height: 50px;
+    padding: 12px;
+}
+
+.info-nav select {
+    width: 120px;
+    height: 26px;
+    outline: none;
+}
+
+.info-nav select option {
+    text-align: center;
+}
+
+/***************瑙掕壊鍒楄〃*********/
+
+.search-container {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.role-name input, .role-state input {
+    width: 200px;
+    border: 1px solid #ccc;
+    outline: none;
+    height: 22px;
+    padding: 2px;
+}
+.role-namen input {
+    width: 270px;
+    border: 1px solid #ccc;
+    outline: none;
+    height: 22px;
+    padding: 2px;
+}
+input.search, input.append {
+    width: 92px;
+    height: 28px;
+    line-height: 28px;
+    background-color: #ff935d;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.role-table table, .zjtype-table, .info-table table {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+
+.role-table table td, .zjtype-table td, .info-table table td {
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+    color: #4d4d4d;
+    font-size: 14px;
+}
+
+.role-look {
+    display: inline-block;
+    width: 60px;
+    margin-right: 2px;
+    padding-left:5px;
+    background: url("../images/main/look.png") no-repeat left center;
+    cursor: pointer;
+    color: #217abf;
+}
+
+.role-work {
+    
+    width: 50px;
+    text-align: right;
+    margin-right: 20px;
+    cursor: pointer;
+    color: #217abf;
+}
+
+.role-edit {
+    display: inline-block;
+    width: 50px;
+    text-align: right;
+    margin-right: 17px;
+    background: url("../images/main/bianji.png") no-repeat left center;
+    cursor: pointer;
+    color: #08ae00;
+}
+.role-shenpi{
+    display: inline-block;
+    width: 50px;
+    text-align: right;
+    margin-right: 10px;
+    background: url("../images/main/shenpi.png") no-repeat left center;
+    cursor: pointer;
+    color: #08ae00;
+}
+
+.role-del {
+    display: inline-block;
+    width: 50px;
+    margin-right: 16px;
+    text-align: right;
+    background: url("../images/main/delete.png") no-repeat left center;
+    cursor: pointer;
+    color: #e9110b;
+}
+
+.table-th td {
+    height: 30px;
+    line-height: 30px;
+    background-color: #ffe0d0;
+    font-size: 16px;
+}
+
+/**************鐢冲姙绠＄悊*********************/
+/*************鐢冲姙瀹℃牳*/
+.country-select {
+    height: 40px;
+    width: 100%;
+    background-color: #217abf;
+}
+
+.country-container {
+    height: 40px;
+    display: inline-block;
+    width: 150px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    background-color: #63839c;
+    cursor: pointer;
+}
+
+.country-container a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.role-table table td.wait-shenhe {
+    color: #217abf;
+}
+
+.role-table table td.loser {
+    color: #e9110b;
+}
+
+.role-kong {
+    display: inline-block;
+    width: 60px;
+}
+
+.shenban-messge, .shenban-upload {
+    margin-top: 5px;
+    border: 1px solid #ccc;
+}
+
+.message-name {
+    background-color: #ffe0d0;
+    line-height: 40px;
+    border-bottom: 1px solid #ccc;
+    padding-left: 20px;
+    color: #4d4d4d;
+}
+
+.message-table {
+    width: 80%;
+}
+
+.message-table td {
+    padding-left: 20px;
+    line-height: 50px;
+    color: #4d4d4d;
+}
+
+.shenfen-pic {
+    width: 100%;
+    padding: 20px 0;
+    overflow-y: scroll;
+    height: 200px;
+}
+
+.shenfen-pic .pic-table {
+    width: 100%;
+}
+
+.shenfen-pic .pic-table td {
+    width: 25%;
+    text-align: center;
+    padding: 6px 0;
+}
+
+.shen-image {
+    width: 140px;
+    height: 140px;
+    line-height: 140px;
+    background-color: #ffbb98;
+    color: #fff;
+    margin: 0 auto;
+    margin-top: 6px;
+}
+
+.shenpi {
+    padding: 10px 0 10px 20px;
+}
+
+textarea.beizhu {
+    width: 100%;
+    height: 80px;
+    line-height: 20px;
+    outline: none;
+    padding: 2px;
+}
+
+.bottom {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/**********  鍏瘉閰嶇疆  ****************/
+
+.zhenjian-add {
+    width: 88px;
+    height: 32px;
+    line-height: 32px;
+    background-color: #ff7d3d;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 4px;
+    margin: 10px 20px;
+}
+
+.page-number {
+    text-align: right;
+    color: #4d4d4d;
+}
+
+.zhenjian {
+    margin-top: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.shenfen {
+    width: 50%;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 120px;
+    overflow: hidden;
+}
+
+.shenfen-title {
+    width: 100%;
+    background-color: #ffe0d0;
+    font-size: 18px;
+    text-align: center;
+    color: #4d4d4d;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.shenfen-input {
+    text-align: center;
+    height: 26px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #4d4d4d;
+}
+
+.front {
+    display: inline-block;
+    width: 50%;
+    border-right: 1px solid #ccc;
+    float: left;
+}
+
+.front div.front-title, .verso div.verso-title {
+    width: 100%;
+    text-align: center;
+    color: #4d4d4d;
+    margin-top: 26px;
+    margin-bottom: 6px;
+}
+
+.front-input, .verso-input {
+    width: 150px;
+    height: 26px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+    color: #4d4d4d;
+}
+
+.shen-edit-btn {
+    width: 100%;
+    margin-top: -10px;
+    margin-bottom: 16px;
+}
+
+.front span, .verso span {
+    display: block;
+    width: 240px;
+    height: 140px;
+    line-height: 140px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 26px;
+}
+
+.shenfen-del, .shenfen-edit {
+    width: 88px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 4px;
+    background-color: #ffa477;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 48px;
+}
+
+.shenfen-del {
+    margin-right: 12px;
+}
+
+.verso {
+    display: inline-block;
+    width: 50%;
+    float: right;
+}
+
+.gongzheng-cailiao {
+    padding: 30px 0 100px 40px;
+}
+
+.gongzheng-cailiao ol li {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.knowledge-add-container {
+    margin-top: 5px;
+    border: 1px solid #ccc;
+}
+
+.knowledge-add-content {
+    width: 80%;
+    margin: 20px auto 50px auto;
+}
+
+.knowledge-title {
+    margin-bottom: 40px;
+}
+
+input.new-title {
+    font-size: 18px;
+    width: 40%;
+    line-height: 150%;
+    text-indent: 5px;
+    outline: none;
+}
+
+.new-knowledge {
+    font-size: 16px;
+    line-height: 150%;
+    vertical-align: top;
+    width: 80%;
+    text-indent: 30px;
+    min-height: 80px;
+    outline: none;
+}
+
+/*********淇℃伅绠＄悊*************/
+.xinxi-nav {
+    text-align: right;
+}
+
+.xinxi-type {
+    margin: 10px 20px;
+}
+
+.xinxi-type select {
+    width: 180px;
+    height: 26px;
+    outline: none;
+}
+
+/****************鏉冮檺璁剧疆****************/
+.quanxian-shezhi {
+    border: 1px solid #ccc;
+    border-top: none;
+    overflow: hidden;
+}
+
+.quanxian-left {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    border-right: 1px solid #ccc;
+    padding-left: 18%;
+    position: relative;
+    height: 250px;
+}
+
+.quanxian-right {
+    display: inline-block;
+    width: 50%;
+    float: right;
+    position: relative;
+    padding-left: 18%;
+}
+
+.quanxian-role {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.quanxian-role span a {
+    display: inline-block;
+    border: 5px solid transparent;
+    border-top: 5px solid #474747;
+}
+
+.quanxian-role-type, .quanxian-edit {
+    margin-left: 40px;
+}
+
+/*!
+ *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.2.0');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.fa-chevron-down:before {
+    content: "\f078"
+}
+
+/* Contenedor Principal
+-----------------------------*/
+.accordion {
+    width: 100%;
+    max-width: 360px;
+    margin: 30px auto 20px;
+}
+
+.accordion .link {
+    cursor: pointer;
+    display: block;
+    padding: 15px 15px 15px 42px;
+    color: #4D4D4D;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.accordion li:last-child .link {
+    border-bottom: 0;
+}
+
+.accordion li i {
+    position: absolute;
+    top: 16px;
+    left: 12px;
+    font-size: 18px;
+    color: #595959;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.accordion li i.fa-chevron-down {
+    left: 100%;
+    font-size: 16px;
+}
+
+.accordion li.open i.fa-chevron-down {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+/**
+ * Submenu
+ -----------------------------*/
+.submenu {
+    display: none;
+    font-size: 14px;
+    margin-left: 20px;
+    position: absolute;
+    left: 45%;
+}
+
+.submenu li {
+    width: 124px;
+    height: 44px;
+    line-height: 44px;
+}
+
+.submenu a {
+    display: block;
+    text-decoration: none;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+#accordion2 .submenu li {
+    padding-left: 30px;
+}
+
+
+.active {
+    background: #e4550e;
+}
+
+.pic-container {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 12%;
+    height: 500px;
+}
+a.link-main {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+/**********个人资料  页面样式***********/
+
+.personal-container {
+    width: 75%;
+    height: 468px;
+    background: url("../images/main/personal-data-background.png") no-repeat;
+    margin-top: 9.2%;
+    margin-left: 9.6%;
+    min-width: 610px;
+}
+table.personal-table {
+    width: 90%;
+    min-width: 550px;
+    padding-top: 50px;
+    margin: 0 auto;
+}
+.personal-table td{
+    height: 50px;
+}
+span.personal-item {
+    width: 100px;
+    display: inline-block;
+    text-align: right;
+    color: #fff;
+    font-size: 20px;
+}
+
+span.tip {
+    display: inline-block;
+    color: #e4550e;
+    margin-left: 5px;
+    font-size: 14px;
+}
+.personal-table input[type="text"]{
+    height: 30px;
+    width: 50%;
+    font-size: 18px;
+    text-indent: 5px;
+    outline: none;
+    color: #a3a3a3;
+    border: 1px solid #ccc;
+}
+.personal-table input[type="password"]{
+    height: 30px;
+    width: 50%;
+    font-size: 18px;
+    text-indent: 5px;
+    outline: none;
+    color: #a3a3a3;
+    border: 1px solid #ccc;
+}
+.sex-choose{
+    display: inline-block;
+}
+.sex-choose label {
+    font-size: 20px;
+    color: #fff;
+    margin: 0 5px;
+}
+.per-sub-container {
+    margin-top: 40px;
+    text-align: center;
+}
+.per-sub-container input[type="button"] {
+    width: 130px;
+    height: 40px;
+    background-color: #ff8f58;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.personal-table input.remark {
+    width: 260px;
+}
+
+/**********搜索栏样式***********/
+.searchsty {
+	line-height: 50px;
+	background-color: white;
+}

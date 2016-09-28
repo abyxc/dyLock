@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="pictureNameAction" namespace="/manage/pictureName" extends="global">
+		<action name="*" class="pictureNameAction" method="{1}">
+			<result name="list">list.jsp</result>
+			<result name="toInsert">oper.jsp</result>
+			<result name="toUpdate">operSelf.jsp</result>
+			<result name="toDetails">details.jsp</result>
+			<result name="toList" type="redirect">list.action?searchTearm1=${searchTearm1}&amp;searchTearm2=${searchTearm2}&amp;pageBean.currentPage=${pageBean.currentPage}&amp;searchTearmx=${searchTearmx}</result>
+		</action>
+	</package>
+</struts>

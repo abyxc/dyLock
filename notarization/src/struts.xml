@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.action.extension" value="action" />
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.multipart.maxSize" value="10701096"/><!--	zdb添加，用来设置文件上传的大小-->
+	<package name="global" namespace="/" extends="struts-default">
+		<!-- 配置拦截器 打开即可用 勿删-->
+<!--		 <interceptors>-->
+<!--			<interceptor name="dolog" class="com.mnsn.utils.Dolog"></interceptor>-->
+<!--			<interceptor name="loginInterceptor" class="com.mnsn.utils.LoginInterceptor"></interceptor>-->
+<!--			<interceptor-stack name="defaultStack">-->
+<!--				<interceptor-ref name="dolog"></interceptor-ref>-->
+<!--	   			<interceptor-ref name="loginInterceptor"></interceptor-ref>-->
+<!--	   			<interceptor-ref name="defaultStack"></interceptor-ref>-->
+<!--	   		</interceptor-stack>-->
+<!--		</interceptors> -->
+		
+		<!-- 配置全局的结果集:当返回的result没有配置的时候会执行全局结果集的配置-->
+		<global-results>
+		
+			<result name="error">${basePath}/common/error.jsp</result>
+ 			<result name="nopri">${basePath}/common/nopri.jsp</result>
+			<result name="nologin">${basePath}/common/toLogin.jsp</result> 
+			
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception" result="error" />
+		</global-exception-mappings>
+	</package>
+
+	<!-- 导入配置文件 -->
+
+		<include file="com/mnsn/project/log/struts-log.xml"/>
+		<include file="com/mnsn/project/privilege/struts-privilege.xml"/>
+		<include file="com/mnsn/project/group/struts-group.xml"/>		
+		<include file="com/mnsn/project/user/struts-user.xml"/>
+        <include file="com/mnsn/project/type/struts-type.xml"/>
+		<include file="com/mnsn/project/uploadMain/struts-uploadMain.xml"></include>
+		<include file="com/mnsn/project/messages/struts-messages.xml"></include>		
+		<include file="com/mnsn/project/templet/struts-templet.xml"></include>
+		<include file="com/mnsn/project/information/struts-information.xml"></include>
+		<include file="com/mnsn/project/pictureName/struts-picturename.xml"></include>
+		
+		<include file="com/mnsn/project/wechat/wcuploadmain/struts-wcuploadMain.xml"></include>
+		<include file="com/mnsn/project/wechat/wcuser/struts-wcuser.xml"></include>
+		<include file="com/mnsn/project/wechat/wcbid/struts-wcbid.xml"></include>
+		<include file="com/mnsn/project/uploadPicture/struts-uploadPicture.xml"></include>
+</struts>

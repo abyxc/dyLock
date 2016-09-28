@@ -1,0 +1,69 @@
+<div class="country-select">
+    <span class="country-container active"><a name="tpl/gongzheng-peizhi/notary-china-manage.html">国内</a></span>
+    <span class="country-container"><a name="tpl/gongzheng-peizhi/notary-foreign-manage.html">涉外</a></span>
+</div>
+<div>
+    <input type="button" class="zhenjian-add" value="增加"/>
+</div>
+<div class="zjtype">
+    <table class="zjtype-table" cellspacing="0" cellpadding="0">
+        <tr class="table-th">
+            <td>公证事项列表</td>
+            <td>操作</td>
+        </tr>
+        <tr>
+            <td>夫妻财产约定协议</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-edit">编辑</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>商标转让声明</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-edit">编辑</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>财产分割协议</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-edit">编辑</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>资助出国留学协议</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-edit">编辑</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>夫妻财产约定协议</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-edit">编辑</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="page-number">
+    <span style="color:#e9110b;">1</span> 2 3....... 12 页
+</div>
+
+<script>
+    $(function(){
+        $(".country-select .country-container a").click(function(){
+            $(".content-right").load($(this).attr('name'));
+        })
+        $(".role-look").click(function(){
+            $(".content-right").load("tpl/gongzheng-peizhi/notary-china-look.html")
+        })
+    })
+</script>

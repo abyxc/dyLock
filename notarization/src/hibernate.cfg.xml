@@ -1,0 +1,35 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+	<!--连接数据库信息	-->
+	<property name="dialect">
+		org.hibernate.dialect.SQLServerDialect
+	</property>
+
+	<!--其他配置-->
+	<property name="show_sql">true</property>
+	<property name="hbm2ddl.auto">update</property>
+
+
+	<!-- 实体类映射 -->
+
+	<mapping class="com.mnsn.project.log.Log" />
+	<mapping class="com.mnsn.project.privilege.Privilege" />
+	<mapping class="com.mnsn.project.group.Group" />
+	<mapping class="com.mnsn.project.user.User" />
+
+	<mapping class="com.mnsn.project.pictureName.PictureName" />	
+	<mapping class="com.mnsn.project.pictureRelevance.PictureRelevance" />	
+	<mapping class="com.mnsn.project.type.Type" />	
+	<mapping class="com.mnsn.project.uploadMain.UploadMain" />	
+	<mapping class="com.mnsn.project.uploadPicture.UploadPicture" />	
+	<mapping class="com.mnsn.project.messages.Messages" />	
+	<mapping class="com.mnsn.project.templet.Templet" />
+	<mapping class="com.mnsn.project.information.Information" />
+
+		
+</session-factory>
+</hibernate-configuration>

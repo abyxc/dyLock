@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="userAction" namespace="/manage/user" extends="global">
+		<action name="*" class="userAction" method="{1}">
+			<result name="list">list.jsp</result>
+			<result name="toInsert">oper.jsp</result>
+			<result name="tolist" type="redirect">list.action?searchTearm1=${searchTearm1}&amp;searchTearm2=${searchTearm2}&amp;pageBean.currentPage=${pageBean.currentPage}&amp;searchTearmx=${searchTearmx}</result>
+			<result name="toUpdate">operSelf.jsp</result>
+<!--			<result name="toDetails">details.jsp</result>-->
+			<result name="oper">oper.jsp</result>
+			<result name="toList" type="redirect">list.action?userType=${userType}</result>
+			<!--	如果登陆成功		-->
+			<result name="toMain">${basePath}/manage/main/main.jsp</result>
+			<result name="pass">${basePath}/manage/main/main.jsp</result>
+			<!--	如果登陆失败		-->
+			<result name="notpass">${basePath}/login.jsp</result><!-- 应急联动系统 -->
+			<result name="uploadFile">${basePath}/demo.jsp</result>
+			<result name="exp">${basePath}/common/exp.jsp</result>
+			<result name="imp">imp.jsp</result>
+			<result name="toDetails">details.jsp</result>
+<!--			前往修改密码页面-->
+			<result name="toedit">oper.jsp</result>
+			<result name="details" >details.jsp</result>
+<!--			个人中心-->
+			<result name="toUpdateUC">usercenter.jsp</result>
+			<result name="toUserCenter" type="redirect">toUpdateUC.action?meg=${meg}</result>
+<!--		下边的全是业务员的数据-->
+			<result name="listSM">SMlist.jsp</result>
+			<result name="toInsertSM">SMoper.jsp</result>
+			<result name="toListSM" type="redirect">listSM.action?searchTearm1=${searchTearm1}&amp;searchTearm2=${searchTearm2}&amp;pageBean.currentPage=${pageBean.currentPage}</result>
+			<result name="toUpdateSM">SMoperSelf.jsp</result>
+			<result name="toDetailsSM">SMdetails.jsp</result>
+			<result name="updatepwd">uppwd.jsp</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* CSS Document */
+/*框架*/
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    text-decoration: blink;
+    color: #484848;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    min-width: 1024px;
+}
+
+.header {
+    width: 100%;
+    font-family: "微软雅黑";
+    font-size: 12px;
+}
+
+#nav {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #c5c5c5;
+    background: #ffffff;
+}
+
+.top_shezhibox {
+    float: right;
+    margin: 10px 20px;
+}
+
+.top_shezhi {
+    clear: right;
+    margin-top: 10px;
+}
+
+.top_shezhi li {
+    float: left;
+    margin-left: 40px;
+}
+
+.top_shezhi li:first-child a {
+    background: url("img/user.png") no-repeat;
+    padding: 5px 0 5px 0px;
+}
+
+.top_shezhi li .big-link{
+    background: url("img/password.png") no-repeat;
+    padding: 5px 0 5px 0px;
+}
+
+.top_shezhi li:last-child a {
+    background: url("img/tuichu.png") no-repeat;
+    padding: 5px 0 5px 0px;
+}
+
+.top_tip {
+    clear: right;
+    margin-top: 35px
+}
+
+.top_tip li {
+    float: right;
+}
+
+.logo {
+    display: block;
+    margin: 9px;
+    float: left;
+}
+
+.section {
+    width: 100%; 
+    background: #f4f4f4;
+}
+
+.big_title {
+    position: absolute;
+    top: 52px;
+    bottom: 0;
+    background-color: #1e2249;
+    width: 175px;
+}
+.big_title li {
+    width: 100%;
+    line-height: 40px;
+    background-color: #1e2249;
+}
+.big_title li .asd{
+    font-size: 18px;
+    background: url("../images/main/file.png") no-repeat left center;
+    padding-left: 34px;
+    color:#50539d;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.big_title li a img{
+	vertical-align:middle;
+}
+.nav_A {
+    margin-left: 10px
+}
+
+.s_title {
+    display: none;
+}
+
+.s_title li {
+    width: 100%;
+    line-height: 40px;
+}
+.s_title li.active {
+    background: #090d2e;
+} 
+.s_title a {
+    display: block;
+    height: 40px;
+    font-size: 16px;
+    color: #e5faff;
+    padding-left: 54px;
+    font-family:"微软雅黑";
+}
+.active {
+    background: #090d2e;
+}
+
+.active a {
+    color: #fff;
+    border-right:3px solid #f16d22;
+}
+
+.left_nav {
+
+}
+
+.right_content {
+    position: absolute;
+    top: 78px;
+    width: 85%;
+    height: 668px;
+    background: #f4f4f4;
+}

@@ -1,0 +1,88 @@
+<div class="nav-header">
+    <p class="new-add">角色列表</p>
+</div>
+<div class="search-container">
+    <form action="">
+        <span class="role-name">
+            角色名称：<input type="text"/>
+        </span>
+        <span class="role-state">
+            角色状态：<input type="text"/>
+        </span>
+            <input type="button" value="查询" class="search"/>
+            <input type="button" value="新增" class="append"/>
+    </form>
+</div>
+<div class="role-table">
+    <table cellspacing="0" cellpadding="0">
+        <tr class="table-th">
+            <td>角色编号</td>
+            <td>角色名称</td>
+            <td>角色状态</td>
+            <td>角色操作</td>
+        </tr>
+        <tr>
+            <td>011</td>
+            <td>张三</td>
+            <td>超级管理员</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-edit">编辑</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>011</td>
+            <td>张三</td>
+            <td>超级管理员</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-edit">编辑</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>011</td>
+            <td>张三</td>
+            <td>超级管理员</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-edit">编辑</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>011</td>
+            <td>张三</td>
+            <td>超级管理员</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-edit">编辑</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>011</td>
+            <td>张三</td>
+            <td>超级管理员</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-edit">编辑</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+    </table>
+</div>
+<script>
+    $(function(){
+        $(".append").click(function(){
+            $(".content-right").load("tpl/role-manage/role-add.html")
+        })
+        $(".role-look").click(function(){
+            $(".content-right").load("tpl/role-manage/role-look.html")
+        })
+        $(".role-edit").click(function(){
+            $(".content-right").load("tpl/role-manage/role-edit.html")
+        })
+    })
+</script>

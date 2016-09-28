@@ -1,0 +1,150 @@
+ <div class="country-select">
+     <span class="country-container active"><a name="tpl/bid-manage/bid-audit/bid-audit-china.html">国内</a></span>
+     <span class="country-container"><a name="tpl/bid-manage/bid-audit/bid-audit-foreign.html">涉外</a></span>
+ </div>
+<div class="search-container">
+    <form action="">
+    <span class="role-name">
+        用户姓名：<input type="text"/>
+    </span>
+    <span class="role-state">
+        证件号码：<input type="text"/>
+    </span>
+    <input type="button" value="查询" class="search"/>
+    </form>
+</div>
+
+<div class="role-table">
+    <table cellspacing="0" cellpadding="0">
+        <tr class="table-th">
+            <td>用户姓名</td>
+            <td>证件类型</td>
+            <td>证件号码</td>
+            <td>申请事项</td>
+            <td>状态</td>
+            <td>操作栏</td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>身份证</td>
+            <td>223568********2568</td>
+            <td>婚姻状况公证</td>
+            <td class="wait-shenhe">待审批</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-shenpi">审批</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>身份证</td>
+            <td>223568********2568</td>
+            <td>婚姻状况公证</td>
+            <td>已通过</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-del">删除</span>
+                <span class="role-kong"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>身份证</td>
+            <td>223568********2568</td>
+            <td>婚姻状况公证</td>
+            <td class="loser">未通过</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-shenpi">审批</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>身份证</td>
+            <td>223568********2568</td>
+            <td>婚姻状况公证</td>
+            <td class="wait-shenhe">已撤销</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-shenpi">审批</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>身份证</td>
+            <td>223568********2568</td>
+            <td>婚姻状况公证</td>
+            <td class="wait-shenhe">已撤销</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-shenpi">审批</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>身份证</td>
+            <td>223568********2568</td>
+            <td>婚姻状况公证</td>
+            <td class="loser">未通过</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-shenpi">审批</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>身份证</td>
+            <td>223568********2568</td>
+            <td>婚姻状况公证</td>
+            <td class="wait-shenhe">待审批</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-shenpi">审批</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>身份证</td>
+            <td>223568********2568</td>
+            <td>婚姻状况公证</td>
+            <td class="wait-shenhe">待审批</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-shenpi">审批</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>身份证</td>
+            <td>223568********2568</td>
+            <td>婚姻状况公证</td>
+            <td class="wait-shenhe">待审批</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-shenpi">审批</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    $(function(){
+        $(".country-select .country-container a").click(function(){
+            $(".content-right").load($(this).attr('name'));
+        })
+        $(".role-look").click(function(){
+            $(".content-right").load("tpl/bid-manage/bid-audit/audit-china-look.html")
+        })
+        $(".role-shenpi").click(function(){
+            $(".content-right").load("tpl/bid-manage/bid-audit/audit-china-shenpi.html")
+        })
+    })
+</script>

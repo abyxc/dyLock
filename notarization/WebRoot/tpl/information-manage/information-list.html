@@ -1,0 +1,60 @@
+<div class="nav-header">
+    <p class="new-add">信息列表</p>
+</div>
+<div class="xinxi-nav">
+    <div class="xinxi-type">
+        类型:
+        <select name="">
+            <option value=""></option>
+        </select>
+    </div>
+</div>
+<div class="role-table">
+    <table cellspacing="0" cellpadding="0">
+        <tr class="table-th">
+            <td>接收人姓名</td>
+            <td>手机号</td>
+            <td>类型</td>
+            <td>发布时间</td>
+            <td>操作</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>15888888888</td>
+            <td></td>
+            <td>2015-12-22</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>15888888888</td>
+            <td></td>
+            <td>2015-12-22</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>15888888888</td>
+            <td></td>
+            <td>2015-12-22</td>
+            <td>
+                <span class="role-look">查看</span>
+                <span class="role-del">删除</span>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    $(function(){
+        $(".role-look").click(function(){
+            $(".content-right").load("tpl/information-manage/information-list-look.html")
+        })
+    })
+</script>
